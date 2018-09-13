@@ -1,4 +1,4 @@
-GIT HUB
+﻿GIT HUB
 
 윈도우 같은 경우 Git bash라는 터미널 형식의 것이 있다.
 
@@ -94,6 +94,6 @@ GIT HUB
 : [비밀번호] 까지 입력하게 되면, 저장이 되는것을 확인 할 수 있다.
 
 
-8. Git을 이용한 Git 파일 받기
+8. Clone 	-	Git을 이용한 Git 파일 받기
 
 git clone git://github주소.git
