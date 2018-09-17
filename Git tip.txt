@@ -97,3 +97,8 @@
 8. Clone 	-	Git을 이용한 Git 파일 받기
 
 git clone git://github주소.git
+
+
+9. 저장소의 최신 내용으로 업데이트하기
+
+git pull
