@@ -102,3 +102,8 @@ git clone git://github주소.git
 9. 저장소의 최신 내용으로 업데이트하기
 
 git pull
+
+10. 업로드시 한글 깨짐 현상 해결
+
+: [git config --global gui.encoding utf-8]
+: [git config gui.encoding utf-8]
