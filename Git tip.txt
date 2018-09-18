@@ -99,11 +99,13 @@
 git clone git://github주소.git
 
 
-9. 저장소의 최신 내용으로 업데이트하기
+9. 저장소를 최신 내용으로 업데이트하기
 
 git pull
 
-10. 업로드시 한글 깨짐 현상 해결
 
-: [git config --global gui.encoding utf-8]
-: [git config gui.encoding utf-8]
+
+
+***(Git Bash 기준) 한글 적용이 되지 않을 때
+
+:[창 상단 우클릭] -> [Options] -> 왼쪽 상단 Text -> Locale : ko_KR / Character set : UTF-8 설정
