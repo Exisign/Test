@@ -11,7 +11,9 @@
 
 이후 사이트에 등록된 자신의 원격 주소를 아래와 같이 입력하면
 
-[git remote add origin https://github.com/Exisign/Test.git]
+[git remote add origin https://github.com/아이디/Repository명]
+
+( Repository가 없을 경우, github 사이트 접속 후, Repositories 라는 항목을 찾은 뒤. [New] / [New repository] 버튼을 눌러서 만들어 주면 된다. 이름만 지어주고, [Create repositoies] 버튼을 통해서 repository 생성을 완료 한다. 'https://github.com/아이디/Repository명' 은 Github를 통해 해당 repository로 들어가게 되면 상단에 있는 주소와 동일하다. )
 
 원격지에 주소를 알아서 찾아간다.
 
@@ -32,7 +34,7 @@
 
 : [git commit -m '파일명']
 
-: git은 처음 사용할 경우, 초기에 자신의 정보를 적어줘야 한다.
+: 위의 행동에 앞서, git은 처음 사용할 경우, 초기에 자신의 정보를 적어줘야 한다.
 
 : [git config --global user.email "exisign777@gmail.com"]
 : [git config --global user.name "exisign"]
@@ -96,14 +98,25 @@
 
 8. Clone 	-	Git을 이용한 Git 파일 받기
 
-git clone git://github주소.git
+: git clone git://github주소.git
 
 
 9. 저장소를 최신 내용으로 업데이트하기
 
-git pull
+: git pull
 
 
+10. Git Add / Commit 취소
+
+: git reset HEAD [file] / git reset HEAD^ 
+
+: 해당 명령어는 되돌린 후, Commit이 1개 이상 남아있어야 가능하다.
+
+: Commit이 단 하나 밖에 없을 경우 = git revert 되돌릴커밋넘버(git log를 통해서 조회) 
+
+11. Commit Massage 변경
+
+: git commit --amend
 
 
 ***(Git Bash 기준) 한글 적용이 되지 않을 때
