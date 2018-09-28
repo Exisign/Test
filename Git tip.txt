@@ -11,43 +11,51 @@
 
 이후 사이트에 등록된 자신의 원격 주소를 아래와 같이 입력하면
 
+원격지에 주소를 찾아간다.
+
+
 [git remote add origin https://github.com/아이디/Repository명]
 
-( Repository가 없을 경우, github 사이트 접속 후, Repositories 라는 항목을 찾은 뒤. [New] / [New repository] 버튼을 눌러서 만들어 주면 된다. 이름만 지어주고, [Create repositoies] 버튼을 통해서 repository 생성을 완료 한다. 'https://github.com/아이디/Repository명' 은 Github를 통해 해당 repository로 들어가게 되면 상단에 있는 주소와 동일하다. )
 
-원격지에 주소를 알아서 찾아간다.
+(!단, Repository가 없을 경우, github 사이트 접속 후, Repositories 라는 항목을 찾은 뒤.
+[New] / [New repository] 버튼을 눌러서 만들어 주면 된다. 이름만 지어주고,
+[Create repositoies] 버튼을 통해서 repository 생성을 완료 한다.
+'https://github.com/아이디/Repository명' 은 Github를 통해 해당 repository로 들어가게 되면 상단에 있는 주소와 동일하다. )
 
 
 2. 파일을 관리 대상으로 지정.
 
 : 아무 형식의 파일을 하나 만들고, [git status] 라고 입력하면 [관리 대상으로 지정]되지 아직 되지 않았다는 문구가 뜬다.
 
-: 여기에 [git add 파일명 혹은 . ]을 입력해주면, 해당 파일 혹은 전체 파일이 [관리 대상으로 지정]된다.
+: 여기에 [git add 파일명 혹은 . ]을 입력해주면, 해당 파일 혹은 전체 파일이 [관리 대상으로 지정]된다. 관리 대상이 되었을 뿐
 
+Commit 되어 로그에 남거나, Push되어 서버에 적용된 것이 아니기 때문에 헷갈리지 말자.
+
+
+---------------------------안봐도 됨.-------------------------------------
 : 파일을 수정하게 되면, SVN과 마찬가지로 modified 상태가 된다.
 -> 단 SVN과 다른 점은 SVN은 관리 대상의 지정 없이 바로 commit이 바로 됨.
-
-: 이때도 역시 [git add 파일명 혹은 . ]을 입력해주면, 해당 파일 혹은 전체 파일이 [관리 대상으로 지정]된다.
+--------------------------------------------------------------------------
 
 
 3. commit과 push를 하는 방법.
 
 : [git commit -m '파일명']
 
-: 위의 행동에 앞서, git은 처음 사용할 경우, 초기에 자신의 정보를 적어줘야 한다.
+위의 행동에 앞서, git은 처음 사용할 경우, 초기에 자신의 정보를 적어줘야 한다.
 
-: [git config --global user.email "exisign777@gmail.com"]
-: [git config --global user.name "exisign"]
+: [git config --global user.email "깃허브 이메일"]
+: [git config --global user.name "깃허브 아이디"]
 
 : [git commit -m 'test']
 
 
-: 커밋을 하면, 이것을 저장을 해야 한다.
-: 저장소에 처음 저장하게 되면, master 라는 브런치를 가진다.
+커밋을 하면, 이것을 저장을 해야 한다. 저장소에 처음 저장하게 되면 master 라는 기본 [브런치]를 가지며,
+해당 브런치에 적용하는 방법은 아래와 같다.
 
 : [git push -u origin master]
-: [아이디]
-: [비밀번호] 를 입력하면 repository에서 새로 고침하면 원격지에 저장된 파일을 확인 가능하다.
+: [깃허브 아이디]
+: [깃허브 비밀번호] 를 입력하면 repository에서 새로 고침하면 원격지에 저장된 파일을 확인 가능하다.
 
 
 4. 소스 관리
@@ -98,21 +106,24 @@
 
 8. Clone 	-	Git을 이용한 Git 파일 받기
 
-: git clone git://github주소.git
+: [git clone git://github주소.git]
 
 
 9. 저장소를 최신 내용으로 업데이트하기
 
-: git pull
+: [git pull]
 
 
 10. Git Add / Commit 취소
 
-: git reset HEAD [file] / git reset HEAD^ 
+: [git reset HEAD '파일명' / git reset HEAD^ ] 
 
-: 해당 명령어는 되돌린 후, Commit이 1개 이상 남아있어야 가능하다.
+해당 명령어는 되돌린 후, 내역의 삭제 후에도 Commit이 1개 이상 남아있을 경우에 가능하다.
 
-: Commit이 단 하나 밖에 없을 경우 = git revert 되돌릴커밋넘버(git log를 통해서 조회) 
+Commit이 단 하나 밖에 없을 경우
+
+: [git revert 되돌릴커밋넘버(git log를 통해서 조회 가능)] 
+
 
 11. Commit Massage 변경
 
