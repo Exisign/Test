@@ -91,10 +91,13 @@ Commit 되어 로그에 남거나, Push되어 서버에 적용된 것이 아니�
 
 7. 브런치간 Merge 파일 합치기
 
+
 : 새 파일을 commit하고 실제 사용하는 master branch로 옮기는 작업. *merge
 
 : [git chechout master]
+//master branch로 branch를 바꾼다
 : [git merge beta]
+//beta branch의 내용을 현재 branch와 합친다
 
 : 베타 브런치에 있던 정보들이 마스터 브런치로 이동하게 된다.
 : 해당 부분까지 하면 로컬에서만 저장된다.
